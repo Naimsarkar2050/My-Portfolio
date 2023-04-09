@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    hsla(154, 100%, 76%, 1) 0%,
+    hsla(234, 100%, 83%, 1) 50%,
+    hsla(288, 100%, 81%, 1) 100%
+  );
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2 {
+  color: #001765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: lightgray;
+
+  /* color: #000000; */
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  border-left: 4px solid #001765;
+  border-top-left-radius: 0;
+}
+
+button:hover {
+  border-left: 4px solid #4caf50;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  margin-top: 10px;
+  background: #ecf2ff;
+  border-left: 4px solid #001765;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+  border-left: 4px solid #4caf50;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+/* css for close icon */
+
+ul li span {
+  position: absolute;
+  right: 2px;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  transition: border 1s;
+}
+
+/* close icon hover effect */
+
+ul li span:hover {
+  background: #fcfcfc;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  input {
+    width: 100%;
+  }
+}
