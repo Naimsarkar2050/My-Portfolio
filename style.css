@@ -540,6 +540,8 @@ nav .fa-solid {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-top: -20px;
+    border-bottom: 3px solid var(--secondary-color);
+    border-top: 3px solid var(--secondary-color);
   }
 
   .adout-col-2 {
@@ -558,6 +560,10 @@ nav .fa-solid {
   .contact-left,
   .contact-right {
     flex-basis: 100%;
+  }
+
+  .social-icons a i {
+    margin-right: 12px;
   }
 
   .copyright {
